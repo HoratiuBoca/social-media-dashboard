@@ -201,7 +201,50 @@ const KPICard = ({ title, value, growth, icon: Icon, color, prefix = "", suffix 
 
 const PlatformBadge = ({ platform }) => {
   const colors = { facebook: "#1877F2", instagram: "#E4405F", tiktok: "#000000" };
-  const labels = { facebook: "FB", instagram: "IG", AS Global" value={kpiData.roas} growth={kpiData.roasGrowth} icon={Target} color="#10b981" suffix="x" />
+  const labels = { facebook: "FB", instagram: "IG", tiktok: "TT" };
+  return (
+    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold text-white" style={{ backgroundColor: colors[platform] }}>
+      {labels[platform]}
+    </span>
+  );
+};
+
+const SentimentDot = ({ sentiment }) => {
+  const colors = { positive: "#10b981", neutral: "#f59e0b", negative: "#ef4444" };
+  return <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: colors[sentiment] }} />;
+};
+
+const StatusBadge = ({ status }) => {
+  const styles = {
+    active: "bg-emerald-100 text-emerald-700",
+    paused: "bg-amber-100 text-amber-700",
+    published: "bg-blue-100 text-blue-700",
+    scheduled: "bg-purple-100 text-purple-700",
+    draft: "bg-gray-100 text-gray-600",
+  };
+  return <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${styles[status]}`}>{status}</span>;
+};
+
+const ContentIcon = ({ type }) => {
+  const icons = { video: Video, reel: Video, image: Image, carousel: Layers, story: Clock, link: ExternalLink, post: MessageCircle };
+  const IconComp = icons[type.toLowerCase()] || MessageCircle;
+  return <IconComp size={14} className="text-gray-400" />;
+};
+
+// âââââââââââââââââââââââââââââââââââââââââââ
+// TAB SECTIONS
+// âââââââââââââââââââââââââââââââââââââââââââ
+
+const OverviewTab = () => (
+  <div className="space-y-6">
+    {/* KPI Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <KPICard title="Total Followers" value={kpiData.totalFollowers} growth={kpiData.followersGrowth} icon={Users} color="#6366f1" />
+      <KPICard title="Engagement Total" value={kpiData.totalEngagement} growth={kpiData.engagementGrowth} icon={Heart} color="#ec4899" />
+      <KPICard title="Reach Total" value={kpiData.totalReach} growth={kpiData.reachGrowth} icon={Eye} color="#8b5cf6" />
+      <KPICard title="Impressions" value={kpiData.totalImpressions} growth={kpiData.impressionsGrowth} icon={Activity} color="#06b6d4" />
+      <KPICard title="Ad Spend" value={kpiData.adSpend} growth={kpiData.adSpendGrowth} icon={DollarSign} color="#f59e0b" prefix="â¬" />
+      <KPICard title="ROAS Global" value={kpiData.roas} growth={kpiData.roasGrowth} icon={Target} color="#10b981" suffix="x" />
     </div>
 
     {/* Charts Row */}
@@ -756,61 +799,6 @@ export default function SocialMediaDashboard() {
               <select
                 value={period}
                 onChange={(e) => setPeriod(e.target.value)}
-                className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              >
-                <option value="7d">Ultimele 7 zile</option>
-                <option value="30d">Ultimele 30 zile</option>
-                <option value="90d">Ultimele 90 zile</option>
-              </select>
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                <RefreshCw size={14} />
-                Refresh
-              </button>
-            </div>
-          </div>
-
-          {/* Tabs */}
-          <div className="flex gap-1 overflow-x-auto pb-1">
-            {tabs.map(tab => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
-                    activeTab === tab.id
-                      ? "bg-indigo-100 text-indigo-700"
-                      : "text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                  }`}
-                >
-                  <Icon size={16} />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        {activeTab === "overview" && <OverviewTab />}
-        {activeTab === "facebook" && <PlatformTab platform="facebook" />}
-        {activeTab === "instagram" && <PlatformTab platform="instagram" />}
-        {activeTab === "tiktok" && <PlatformTab platform="tiktok" />}
-        {activeTab === "ads" && <AdsTab />}
-        {activeTab === "competition" && <CompetitionTab />}
-        {activeTab === "calendar" && <CalendarTab />}
-      </div>
-
-      {/* Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-4 text-center">
-        <p className="text-xs text-gray-400">Social Media Dashboard Â· Marmorex Â· Ultimul update: 18 Mar 2026, 10:30</p>
-      </div>
-    </div>
-  );
-}
-            onChange={(e) => setPeriod(e.target.value)}
                 className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="7d">Ultimele 7 zile</option>
