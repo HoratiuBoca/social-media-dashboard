@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   BarChart, Bar, LineChart, Line, AreaChart, Area, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart,
@@ -11,6 +11,9 @@ import {
   Filter, Download, RefreshCw, Search, ExternalLink, Play, Image, Video,
   ThumbsUp, Bookmark, Send, Award, Layers, PieChart as PieChartIcon
 } from "lucide-react";
+
+const MAKE_WEBHOOK_URL = "https://hook.eu2.make.com/lbaopu3j9qznaq1fv92h9fom8bvxst9l";
+
 
 // ═══════════════════════════════════════════
 // DEMO DATA
@@ -779,6 +782,32 @@ const tabs = [
 ];
 
 export default function SocialMediaDashboard() {
+
+  const [liveData, setLiveData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function fetchDashboardData() {
+      try {
+        const r = await fetch(MAKE_WEBHOOK_URL);
+        if (r.ok) { const d = await r.json(); setLiveData(d); }
+      } catch(e) { console.log("Demo mode"); }
+      finally { setLoading(false); }
+    }
+    fetchDashboardData();
+  }, []);
+  const liveKpi = liveData?.kpi || kpiData;
+  const livePlatforms = liveData?.platform_stats || platformStats;
+  const liveTrend = liveData?.monthly_trend || monthlyTrend;
+  const liveWeekly = liveData?.weekly_engagement || weeklyEngagement;
+  const livePosts = liveData?.top_posts || topPosts;
+  const liveComments = liveData?.recent_comments || recentComments;
+  const liveMeta = liveData?.meta_ads || metaAdsData;
+  const liveTiktok = liveData?.tiktok_ads || tiktokAdsData;
+  const liveCamps = liveData?.campaigns || campaignData;
+  const liveSpend = liveData?.ad_spend_trend || adSpendTrend;
+  const liveComps = liveData?.competitors || competitors;
+  const liveCal = liveData?.calendar || contentCalendar;
+  const liveAlerts = liveData?.alerts || alerts;
   const [activeTab, setActiveTab] = useState("overview");
   const [period, setPeriod] = useState("30d");
 
@@ -853,4 +882,5 @@ export default function SocialMediaDashboard() {
     </div>
   );
 }
+
 
