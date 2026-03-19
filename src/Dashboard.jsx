@@ -48,19 +48,19 @@ const monthlyTrend = [
 
 const weeklyEngagement = [
   { day: "Luni", likes: 1820, comments: 420, shares: 310 },
-  { day: "Marți", likes: 2100, comments: 380, shares: 280 },
+  { day: "Marti", likes: 2100, comments: 380, shares: 280 },
   { day: "Miercuri", likes: 2450, comments: 510, shares: 420 },
   { day: "Joi", likes: 1950, comments: 350, shares: 290 },
   { day: "Vineri", likes: 2800, comments: 620, shares: 510 },
-  { day: "Sâmbătă", likes: 3200, comments: 780, shares: 680 },
-  { day: "Duminică", likes: 2900, comments: 650, shares: 540 },
+  { day: "Sambata", likes: 3200, comments: 780, shares: 680 },
+  { day: "Duminica", likes: 2900, comments: 650, shares: 540 },
 ];
 
 const topPosts = {
   facebook: [
-    { id: 1, type: "video", content: "Behind the scenes - procesul de producție", likes: 2400, comments: 380, shares: 210, reach: 45000, date: "15 Mar" },
-    { id: 2, type: "image", content: "Lansare produs nou - Colecția Primăvară", likes: 1800, comments: 290, shares: 180, reach: 38000, date: "12 Mar" },
-    { id: 3, type: "link", content: "Blog: 5 tendințe în industrie pentru 2026", likes: 950, comments: 120, shares: 340, reach: 28000, date: "10 Mar" },
+    { id: 1, type: "video", content: "Behind the scenes - procesul de productie", likes: 2400, comments: 380, shares: 210, reach: 45000, date: "15 Mar" },
+    { id: 2, type: "image", content: "Lansare produs nou - Colectia Primavara", likes: 1800, comments: 290, shares: 180, reach: 38000, date: "12 Mar" },
+    { id: 3, type: "link", content: "Blog: 5 tendinte in industrie pentru 2026", likes: 950, comments: 120, shares: 340, reach: 28000, date: "10 Mar" },
   ],
   instagram: [
     { id: 1, type: "reel", content: "Reel viral - Tutorial rapid", likes: 8200, comments: 1200, shares: 890, reach: 125000, date: "14 Mar" },
@@ -69,19 +69,19 @@ const topPosts = {
   ],
   tiktok: [
     { id: 1, type: "video", content: "Trend viral - Day in the life", likes: 12400, comments: 2100, shares: 4500, reach: 89000, date: "16 Mar" },
-    { id: 2, type: "video", content: "Tutorial produs în 60 secunde", likes: 8900, comments: 1400, shares: 2800, reach: 67000, date: "13 Mar" },
-    { id: 3, type: "video", content: "Răspundem la comentarii", likes: 5600, comments: 980, shares: 1200, reach: 42000, date: "8 Mar" },
+    { id: 2, type: "video", content: "Tutorial produs in 60 secunde", likes: 8900, comments: 1400, shares: 2800, reach: 67000, date: "13 Mar" },
+    { id: 3, type: "video", content: "Raspundem la comentarii", likes: 5600, comments: 980, shares: 1200, reach: 42000, date: "8 Mar" },
   ],
 };
 
 const recentComments = [
-  { platform: "instagram", user: "@maria_design", text: "Super produs! De unde pot comanda?", post: "Lansare colecție", time: "2 min", sentiment: "positive" },
-  { platform: "facebook", user: "Ion Popescu", text: "Calitate excelentă, recomand!", post: "Review produs", time: "15 min", sentiment: "positive" },
-  { platform: "tiktok", user: "@cool_reviewer", text: "Aștept și eu un cod de reducere 😅", post: "Tutorial produs", time: "32 min", sentiment: "neutral" },
-  { platform: "instagram", user: "@ana.shop", text: "Când revine în stoc mărimea M?", post: "Produs sold out", time: "1h", sentiment: "neutral" },
-  { platform: "facebook", user: "George V.", text: "Am comandat și nu am primit tracking-ul", post: "Post promovat", time: "2h", sentiment: "negative" },
+  { platform: "instagram", user: "@maria_design", text: "Super produs! De unde pot comanda?", post: "Lansare colectie", time: "2 min", sentiment: "positive" },
+  { platform: "facebook", user: "Ion Popescu", text: "Calitate excelenta, recomand!", post: "Review produs", time: "15 min", sentiment: "positive" },
+  { platform: "tiktok", user: "@cool_reviewer", text: "Astept si eu un cod de reducere 😅", post: "Tutorial produs", time: "32 min", sentiment: "neutral" },
+  { platform: "instagram", user: "@ana.shop", text: "Cand revine in stoc marimea M?", post: "Produs sold out", time: "1h", sentiment: "neutral" },
+  { platform: "facebook", user: "George V.", text: "Am comandat si nu am primit tracking-ul", post: "Post promovat", time: "2h", sentiment: "negative" },
   { platform: "tiktok", user: "@fashionlover", text: "Cel mai bun brand din RO! 🔥", post: "Trend viral", time: "3h", sentiment: "positive" },
-  { platform: "instagram", user: "@mihai_foto", text: "Puteți face și un tutorial video?", post: "Carousel tips", time: "4h", sentiment: "neutral" },
+  { platform: "instagram", user: "@mihai_foto", text: "Puteti face si un tutorial video?", post: "Carousel tips", time: "4h", sentiment: "neutral" },
 ];
 
 // Ads Data
@@ -132,7 +132,7 @@ const adSpendTrend = [
 
 // Competitor Data
 const competitors = [
-  { name: "Brand-ul Tău", followers_fb: 45200, followers_ig: 52300, followers_tt: 30345, engagement: 5.4, posts_week: 12, growth: 3.2, isYou: true },
+  { name: "Brand-ul Tau", followers_fb: 45200, followers_ig: 52300, followers_tt: 30345, engagement: 5.4, posts_week: 12, growth: 3.2, isYou: true },
   { name: "Competitor A", followers_fb: 68400, followers_ig: 89200, followers_tt: 45600, engagement: 3.8, posts_week: 15, growth: 1.8, isYou: false },
   { name: "Competitor B", followers_fb: 32100, followers_ig: 41500, followers_tt: 52800, engagement: 6.2, posts_week: 18, growth: 5.1, isYou: false },
   { name: "Competitor C", followers_fb: 55800, followers_ig: 62300, followers_tt: 28400, engagement: 4.1, posts_week: 10, growth: 2.4, isYou: false },
@@ -151,23 +151,23 @@ const competitorRadar = [
 const contentCalendar = [
   { date: "18 Mar", platform: "instagram", type: "Reel", title: "Tutorial - Spring Look", status: "scheduled", time: "10:00" },
   { date: "18 Mar", platform: "tiktok", type: "Video", title: "Trend Challenge #SpringVibes", status: "scheduled", time: "14:00" },
-  { date: "18 Mar", platform: "facebook", type: "Post", title: "Blog share - Ghid primăvară", status: "published", time: "09:00" },
+  { date: "18 Mar", platform: "facebook", type: "Post", title: "Blog share - Ghid primavara", status: "published", time: "09:00" },
   { date: "19 Mar", platform: "instagram", type: "Story", title: "Q&A Session cu echipa", status: "draft", time: "11:00" },
   { date: "19 Mar", platform: "instagram", type: "Carousel", title: "Top 5 produse martie", status: "draft", time: "16:00" },
-  { date: "19 Mar", platform: "tiktok", type: "Video", title: "Behind the scenes - Ședință foto", status: "scheduled", time: "12:00" },
-  { date: "20 Mar", platform: "facebook", type: "Video", title: "Live Q&A - Lansare nouă", status: "draft", time: "18:00" },
-  { date: "20 Mar", platform: "instagram", type: "Reel", title: "Unboxing - Colecția nouă", status: "scheduled", time: "13:00" },
-  { date: "20 Mar", platform: "tiktok", type: "Video", title: "Răspundem la comentarii #2", status: "draft", time: "15:00" },
+  { date: "19 Mar", platform: "tiktok", type: "Video", title: "Behind the scenes - Sedinta foto", status: "scheduled", time: "12:00" },
+  { date: "20 Mar", platform: "facebook", type: "Video", title: "Live Q&A - Lansare noua", status: "draft", time: "18:00" },
+  { date: "20 Mar", platform: "instagram", type: "Reel", title: "Unboxing - Colectia noua", status: "scheduled", time: "13:00" },
+  { date: "20 Mar", platform: "tiktok", type: "Video", title: "Raspundem la comentarii #2", status: "draft", time: "15:00" },
   { date: "21 Mar", platform: "instagram", type: "Post", title: "Testimonial client", status: "draft", time: "10:00" },
-  { date: "21 Mar", platform: "facebook", type: "Post", title: "Ofertă weeked - 20% reducere", status: "draft", time: "09:00" },
+  { date: "21 Mar", platform: "facebook", type: "Post", title: "Oferta weeked - 20% reducere", status: "draft", time: "09:00" },
 ];
 
 const alerts = [
   { type: "spike", message: "Engagement spike +240% pe TikTok - video viral detectat", time: "1h", severity: "info" },
   { type: "warning", message: "3 comentarii negative neadresate pe Facebook", time: "2h", severity: "warning" },
-  { type: "milestone", message: "Instagram a depășit 52K followers!", time: "5h", severity: "success" },
-  { type: "ad", message: "Campaign 'Retargeting' - ROAS scăzut sub 3.0 pe TikTok", time: "8h", severity: "warning" },
-  { type: "competitor", message: "Competitor B a lansat o campanie agresivă pe TikTok", time: "12h", severity: "info" },
+  { type: "milestone", message: "Instagram a depasit 52K followers!", time: "5h", severity: "success" },
+  { type: "ad", message: "Campaign 'Retargeting' - ROAS scazut sub 3.0 pe TikTok", time: "8h", severity: "warning" },
+  { type: "competitor", message: "Competitor B a lansat o campanie agresiva pe TikTok", time: "12h", severity: "info" },
 ];
 
 // ═══════════════════════════════════════════
@@ -194,7 +194,7 @@ const KPICard = ({ title, value, growth, icon: Icon, color, prefix = "", suffix 
     <div className={`flex items-center text-sm ${growth >= 0 ? "text-emerald-600" : "text-red-500"}`}>
       {growth >= 0 ? <ArrowUpRight size={16} /> : <ArrowDownRight size={16} />}
       <span className="font-medium ml-1">{Math.abs(growth)}%</span>
-      <span className="text-gray-400 ml-1">vs luna trecută</span>
+      <span className="text-gray-400 ml-1">vs luna trecuta</span>
     </div>
   </div>
 );
@@ -251,7 +251,7 @@ const OverviewTab = () => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Followers Trend */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Evoluție Followers</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Evolutie Followers</h3>
         <ResponsiveContainer width="100%" height={280}>
           <AreaChart data={monthlyTrend}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -268,7 +268,7 @@ const OverviewTab = () => (
 
       {/* Weekly Engagement */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Engagement Săptămânal</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Engagement Saptamanal</h3>
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={weeklyEngagement}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -294,7 +294,7 @@ const OverviewTab = () => (
             </div>
             <div>
               <h4 className="font-semibold text-gray-800 capitalize">{platform}</h4>
-              <span className="text-xs text-gray-400">{stats.posts} postări luna aceasta</span>
+              <span className="text-xs text-gray-400">{stats.posts} postari luna aceasta</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -336,7 +336,7 @@ const OverviewTab = () => (
       {/* Alerts */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-base font-semibold text-gray-800">Alerte & Notificări</h3>
+          <h3 className="text-base font-semibold text-gray-800">Alerte & Notificari</h3>
           <Bell size={18} className="text-gray-400" />
         </div>
         <div className="space-y-3">
@@ -349,7 +349,7 @@ const OverviewTab = () => (
                 <IconA size={18} className={a.severity === "warning" ? "text-amber-500" : a.severity === "success" ? "text-emerald-500" : "text-blue-500"} />
                 <div className="flex-1">
                   <p className="text-sm text-gray-700">{a.message}</p>
-                  <span className="text-xs text-gray-400">{a.time} în urmă</span>
+                  <span className="text-xs text-gray-400">{a.time} in urma</span>
                 </div>
               </div>
             );
@@ -396,7 +396,7 @@ const PlatformTab = ({ platform }) => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Daily Performance */}
         <div className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 className="text-base font-semibold text-gray-800 mb-4">Performanță Zilnică (Ultimele 7 zile)</h3>
+          <h3 className="text-base font-semibold text-gray-800 mb-4">Performanta Zilnica (Ultimele 7 zile)</h3>
           <ResponsiveContainer width="100%" height={280}>
             <LineChart data={dailyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -412,7 +412,7 @@ const PlatformTab = ({ platform }) => {
 
         {/* Engagement Breakdown */}
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 className="text-base font-semibold text-gray-800 mb-4">Distribuție Engagement</h3>
+          <h3 className="text-base font-semibold text-gray-800 mb-4">Distributie Engagement</h3>
           <ResponsiveContainer width="100%" height={200}>
             <PieChart>
               <Pie data={engagementByType} cx="50%" cy="50%" innerRadius={50} outerRadius={80} paddingAngle={5} dataKey="value">
@@ -434,13 +434,13 @@ const PlatformTab = ({ platform }) => {
 
       {/* Top Posts */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Top Postări</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Top Postari</h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left text-gray-500 border-b border-gray-100">
                 <th className="pb-3 font-medium">Tip</th>
-                <th className="pb-3 font-medium">Conținut</th>
+                <th className="pb-3 font-medium">Continut</th>
                 <th className="pb-3 font-medium text-right">Likes</th>
                 <th className="pb-3 font-medium text-right">Comentarii</th>
                 <th className="pb-3 font-medium text-right">Shares</th>
@@ -556,7 +556,7 @@ const AdsTab = () => (
           <thead>
             <tr className="text-left text-gray-500 border-b border-gray-100">
               <th className="pb-3 font-medium">Campanie</th>
-              <th className="pb-3 font-medium">Platformă</th>
+              <th className="pb-3 font-medium">Platforma</th>
               <th className="pb-3 font-medium">Status</th>
               <th className="pb-3 font-medium text-right">Spend</th>
               <th className="pb-3 font-medium text-right">Impressions</th>
@@ -597,7 +597,7 @@ const CompetitionTab = () => (
   <div className="space-y-6">
     {/* Competitor Comparison Table */}
     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-      <h3 className="text-base font-semibold text-gray-800 mb-4">Comparație Competitori</h3>
+      <h3 className="text-base font-semibold text-gray-800 mb-4">Comparatie Competitori</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -607,7 +607,7 @@ const CompetitionTab = () => (
               <th className="pb-3 font-medium text-right">IG Followers</th>
               <th className="pb-3 font-medium text-right">TT Followers</th>
               <th className="pb-3 font-medium text-right">Engagement</th>
-              <th className="pb-3 font-medium text-right">Post/săpt</th>
+              <th className="pb-3 font-medium text-right">Post/sapt</th>
               <th className="pb-3 font-medium text-right">Growth</th>
             </tr>
           </thead>
@@ -636,7 +636,7 @@ const CompetitionTab = () => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Radar Chart */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Comparație Radar</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Comparatie Radar</h3>
         <ResponsiveContainer width="100%" height={320}>
           <RadarChart data={competitorRadar}>
             <PolarGrid />
@@ -654,7 +654,7 @@ const CompetitionTab = () => (
 
       {/* Total Followers Comparison */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Total Followers per Platformă</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Total Followers per Platforma</h3>
         <ResponsiveContainer width="100%" height={320}>
           <BarChart data={competitors} layout="vertical">
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -672,19 +672,19 @@ const CompetitionTab = () => (
 
     {/* Insights */}
     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-      <h3 className="text-base font-semibold text-gray-800 mb-4">Insights Competiție</h3>
+      <h3 className="text-base font-semibold text-gray-800 mb-4">Insights Competitie</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="p-4 rounded-lg bg-emerald-50 border border-emerald-200">
-          <h4 className="font-semibold text-emerald-800 text-sm mb-1">Avantajul Tău</h4>
-          <p className="text-sm text-emerald-700">Engagement rate mai mare decât Competitor A (+1.6%) și C (+1.3%). Conținutul tău rezonează mai bine cu audiența.</p>
+          <h4 className="font-semibold text-emerald-800 text-sm mb-1">Avantajul Tau</h4>
+          <p className="text-sm text-emerald-700">Engagement rate mai mare decat Competitor A (+1.6%) si C (+1.3%). Continutul tau rezoneaza mai bine cu audienta.</p>
         </div>
         <div className="p-4 rounded-lg bg-amber-50 border border-amber-200">
           <h4 className="font-semibold text-amber-800 text-sm mb-1">Oportunitate</h4>
-          <p className="text-sm text-amber-700">Competitor B crește rapid pe TikTok (+5.1%). Consideră creșterea frecvenței de postare pe această platformă.</p>
+          <p className="text-sm text-amber-700">Competitor B creste rapid pe TikTok (+5.1%). Considera cresterea frecventei de postare pe aceasta platforma.</p>
         </div>
         <div className="p-4 rounded-lg bg-blue-50 border border-blue-200">
           <h4 className="font-semibold text-blue-800 text-sm mb-1">Threat</h4>
-          <p className="text-sm text-blue-700">Competitor A domină pe Instagram cu 89.2K followers. Focus pe Reels și colaborări cu influenceri pentru a reduce gap-ul.</p>
+          <p className="text-sm text-blue-700">Competitor A domina pe Instagram cu 89.2K followers. Focus pe Reels si colaborari cu influenceri pentru a reduce gap-ul.</p>
         </div>
       </div>
     </div>
@@ -700,7 +700,7 @@ const CalendarTab = () => {
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
           <Calendar size={24} className="text-indigo-500 mx-auto mb-2" />
           <p className="text-2xl font-bold">{contentCalendar.length}</p>
-          <p className="text-xs text-gray-400">Postări planificate</p>
+          <p className="text-xs text-gray-400">Postari planificate</p>
         </div>
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
           <Send size={24} className="text-emerald-500 mx-auto mb-2" />
@@ -742,7 +742,7 @@ const CalendarTab = () => {
 
       {/* Content Mix */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-800 mb-4">Mix Conținut Planificat</h3>
+        <h3 className="text-base font-semibold text-gray-800 mb-4">Mix Continut Planificat</h3>
         <ResponsiveContainer width="100%" height={250}>
           <PieChart>
             <Pie
@@ -774,7 +774,7 @@ const tabs = [
   { id: "instagram", label: "Instagram", icon: Heart },
   { id: "tiktok", label: "TikTok", icon: Play },
   { id: "ads", label: "Ads Performance", icon: Target },
-  { id: "competition", label: "Competiție", icon: Award },
+  { id: "competition", label: "Competitie", icon: Award },
   { id: "calendar", label: "Calendar", icon: Calendar },
 ];
 
