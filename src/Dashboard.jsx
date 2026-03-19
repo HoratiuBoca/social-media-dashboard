@@ -77,7 +77,7 @@ const topPosts = {
 const recentComments = [
   { platform: "instagram", user: "@maria_design", text: "Super produs! De unde pot comanda?", post: "Lansare colectie", time: "2 min", sentiment: "positive" },
   { platform: "facebook", user: "Ion Popescu", text: "Calitate excelenta, recomand!", post: "Review produs", time: "15 min", sentiment: "positive" },
-  { platform: "tiktok", user: "@cool_reviewer", text: "Astept si eu un cod de reducere 😅", post: "Tutorial produs", time: "32 min", sentiment: "neutral" },
+  { platform: "tiktok", user: "@cool_reviewer", text: "Astept si eu un cod de reducere :)", post: "Tutorial produs", time: "32 min", sentiment: "neutral" },
   { platform: "instagram", user: "@ana.shop", text: "Cand revine in stoc marimea M?", post: "Produs sold out", time: "1h", sentiment: "neutral" },
   { platform: "facebook", user: "George V.", text: "Am comandat si nu am primit tracking-ul", post: "Post promovat", time: "2h", sentiment: "negative" },
   { platform: "tiktok", user: "@fashionlover", text: "Cel mai bun brand din RO! 🔥", post: "Trend viral", time: "3h", sentiment: "positive" },
@@ -853,3 +853,4 @@ export default function SocialMediaDashboard() {
     </div>
   );
 }
+
